@@ -8,40 +8,30 @@ Original file is located at
 
 ## Importing the Libraries
 """
+
 import pickle 
 from sklearn.datasets import load_files
 
 """## Create the dataset"""
 
 # Download the dataset
-!wget https://ai.stanford.edu/~amaas/data/sentiment/aclImdb_v1.tar.gz
-    
+!wget http://www.cs.cornell.edu/people/pabo/movie-review-data/review_polarity.tar.gz
+
 # Unzip the dataset
 import tarfile
-tar = tarfile.open('aclImdb_v1.tar.gz')
+tar = tarfile.open('review_polarity.tar.gz')
 tar.extractall()
 tar.close()
 
 #Load the datset
-reviews = load_files('aclImdb/train')
-X_train,y_train = reviews.data,reviews.target
-
-"""## Loading the Test Data"""
-
-test_reviews = load_files('aclImdb/test')
-X_test,y_test = test_reviews.data,test_reviews.target
+reviews = load_files('txt_sentoken/')
+X,y = reviews.data,reviews.target
 
 """## Pickling the dataset"""
 
 !mkdir dataset
-with open('dataset/X_train.pickle','wb') as f:
-    pickle.dump(X_train,f)
+with open('dataset/X.pickle','wb') as f:
+    pickle.dump(X,f)
     
-with open('dataset/y_train.pickle','wb') as f:
-    pickle.dump(y_train,f)
-
-with open('dataset/X_test.pickle','wb') as f:
-    pickle.dump(X_test,f)
-    
-with open('dataset/y_test.pickle','wb') as f:
-    pickle.dump(y_test,f)
+with open('dataset/y.pickle','wb') as f:
+    pickle.dump(y,f)
