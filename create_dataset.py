@@ -11,7 +11,7 @@ Original file is located at
 import pickle 
 from sklearn.datasets import load_files
 
-"""## Create the **dataset**"""
+"""## Create the dataset"""
 
 # Download the dataset
 !wget https://ai.stanford.edu/~amaas/data/sentiment/aclImdb_v1.tar.gz
