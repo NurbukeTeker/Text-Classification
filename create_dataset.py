@@ -8,7 +8,6 @@ Original file is located at
 
 ## Importing the Libraries
 """
-
 import pickle 
 from sklearn.datasets import load_files
 
