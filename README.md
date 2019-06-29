@@ -20,5 +20,5 @@ The corpus was split into train and test data and several models were trained an
 Accuracy - 
 
 **SVM** - 0.84 </br>
-**Logistic Regression** - **0.87**</br>
+####  **Logistic Regression** - **0.87**</br>
 **Random Forest** - 0.84</br>
