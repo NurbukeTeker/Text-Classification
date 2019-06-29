@@ -1,1 +1,57 @@
-## Text Classification 
+# Text Classification 
+
+## Dataset
+
+There are many datasets available freely on the web to perform text classification. The dataset that was used is the Cornell sentiment analysis dataset.
+
+Link: [http://www.cs.cornell.edu/people/pabo/movie-review-data/ ]
+
+In this page you will be able to find a lot of datasets and the one that was used is "polarity_dataset_v2.0" which was introduced in Pang/Lee ACL 2004.
+
+This dataset contains 1000 positive and 1000 negative reviews.
+
+## Implementation
+
+The corpus was created by using regular expression formatting and was converted into Bag-Of-Words(BOW) model. This was converted into a TF-IDF model.
+The corpus was split into train and test data and several models were trained and were tested.
+
+## Results
+
+------------------------------ SVM --------------------------------
+
+              precision    recall  f1-score   support
+
+           0       0.88      0.81      0.84       208
+           1       0.81      0.89      0.85       192
+
+    accuracy                           0.84       400
+   macro avg       0.85      0.85      0.84       400
+weighted avg       0.85      0.84      0.84       400
+
+-------------------------------- XX -------------------------------
+
+----------------------- Logistic Regression -----------------------
+
+              precision    recall  f1-score   support
+
+           0       0.90      0.85      0.87       208
+           1       0.85      0.90      0.87       192
+
+    accuracy                           0.87       400
+   macro avg       0.87      0.87      0.87       400
+weighted avg       0.87      0.87      0.87       400
+
+-------------------------------- XX -------------------------------
+
+--------------------------- Random Forest -------------------------
+
+              precision    recall  f1-score   support
+
+           0       0.84      0.86      0.85       208
+           1       0.84      0.82      0.83       192
+
+    accuracy                           0.84       400
+   macro avg       0.84      0.84      0.84       400
+weighted avg       0.84      0.84      0.84       400
+
+-------------------------------- XX -------------------------------
